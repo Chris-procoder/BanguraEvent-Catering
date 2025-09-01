@@ -50,6 +50,15 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.classList.toggle('active');
             menuToggle.classList.toggle('active');
         });
+        
+        // Close mobile menu when clicking nav links
+        const navLinkItems = document.querySelectorAll('.nav-links a');
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
     }
 
     // Hero Slider
