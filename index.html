@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bangura Event & Catering - Professional Culinary Arts & Hair Styling Services | Custom Catering & Beautiful Braids">
+  <title>Bangura Event & Catering | Culinary Arts & Hair Styling</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="advanced-features.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="top-bar">
+      <div class="container">
+        <div class="maintenance-notice">
+          <span><i class="fas fa-tools"></i> This website is currently undergoing maintenance - Some features may be temporarily unavailable</span>
+        </div>
+        <div class="contact-info">
+          <span><i class="fas fa-phone"></i> +1 (555) 123-4567</span>
+          <span><i class="fas fa-envelope"></i> info@banguraevent.com</span>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">Bangura<span> Event & Catering</span></a>
+
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="cart-icon"><a href="#cart"><i class="fas fa-shopping-bag"></i> <span class="cart-count">0</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-slider">
+      <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
+        <div class="slide-content">
+          <h1>Culinary Excellence & Beauty Artistry</h1>
+          <p>Professional catering services and exquisite hair styling by Bangura Event & Catering</p>
+          <a href="#collections" class="btn btn-primary">View Collections</a>
+          <a href="#contact" class="btn btn-outline">Book Appointment</a>
+          <div class="feature-buttons">
+            <button id="price-calculator-btn" class="feature-btn" onclick="openPriceCalculator()">
+              <i class="fas fa-calculator"></i>
+              Get Instant Quote
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
+        <div class="slide-content">
+          <h1>Gourmet Excellence</h1>
+          <p>Experience the perfect taste with our made-to-order service</p>
+          <a href="#services" class="btn btn-primary">Our Services</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
+        <div class="slide-content">
+          <h1>Master Craftsmanship</h1>
+          <p>Where traditional techniques meet contemporary design in every creation</p>
+          <a href="#about" class="btn btn-primary">Our Heritage</a>
+          <a href="#collections" class="btn btn-outline">View Portfolio</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider-dots"></div>
+      <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="collections" class="section">
+    <div class="container">
+      <h2 class="section-title">What We Stand For</h2>
+      <p class="section-subtitle">Excellence in culinary arts and hair styling - see our work in action</p>
+      <!-- Gallery Display -->
+      <div class="collections-grid">
+        <div class="collection-card">
+          <div class="collection-image" style="background-image: url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+          <h3>Culinary Excellence</h3>
+          <p>Gourmet dishes and elegant presentations</p>
+        </div>
+        <div class="collection-card">
+          <div class="collection-image" style="background-image: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+          <h3>Hair Artistry</h3>
+          <p>Beautiful braids and elegant designs</p>
+        </div>
+        <div class="collection-card">
+          <div class="collection-image" style="background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+          <h3>Event Catering</h3>
+          <p>Perfect for special occasions</p>
+        </div>
+        <div class="collection-card">
+          <div class="collection-image" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+          <h3>Private Chef</h3>
+          <p>Intimate dining experiences</p>
+        </div>
+
+        <!-- Advanced Features Section -->
+        <div class="advanced-features" style="margin-top: 60px; text-align: center;">
+          <h3 style="margin-bottom: 30px; color: var(--primary-color);">Try Our Advanced Features</h3>
+          <div class="feature-buttons">
+            <button id="price-calculator-btn-2" class="feature-btn" onclick="openPriceCalculator()">
+              <i class="fas fa-calculator"></i>
+              Get Instant Quote
+            </button>
+          </div>
+          <p style="margin-top: 20px; color: var(--dark-gray); font-size: 0.9rem;">
+            Use our pricing calculator to get instant quotes for your catering and styling needs
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3>Event Catering</h3>
+          <p>Full-service catering for weddings, corporate events, and special occasions with custom menus.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-birthday-cake"></i>
+          </div>
+          <h3>Private Chef</h3>
+          <p>Intimate dining experiences with personalized menus crafted in your home.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-cut"></i>
+          </div>
+          <h3>Hair Braiding</h3>
+          <p>Traditional and contemporary braiding styles for all hair types and occasions.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-magic"></i>
+          </div>
+          <h3>Special Occasion Styling</h3>
+          <p>Elegant hairstyles for weddings, proms, and other special events.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Our Work</h2>
+      <div class="gallery-tabs">
+        <button class="tab-btn active" data-tab="culinary">Culinary Arts</button>
+        <button class="tab-btn" data-tab="hair">Hair Styling</button>
+      </div>
+      
+      <div class="gallery-content">
+        <div class="tab-content active" id="culinary">
+          <div class="gallery-grid">
+            <div class="gallery-item" data-lightbox="culinary">
+              <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gourmet Dish">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="culinary">
+              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Elegant Plating">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="culinary">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Wedding Cake">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="culinary">
+              <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Appetizers">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="culinary">
+              <img src="https://placehold.co/400x300/b8860b/ffffff?text=Seafood+Platter" alt="Seafood Platter">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="culinary">
+              <img src="https://placehold.co/400x300/8b4513/ffffff?text=Grilled+Entrees" alt="Grilled Entrees">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="culinary">
+              <img src="https://placehold.co/400x300/a0522d/ffffff?text=Dessert+Table" alt="Dessert Table">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="culinary">
+              <img src="https://placehold.co/400x300/d2b48c/ffffff?text=Buffet+Setup" alt="Buffet Setup">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-content" id="hair">
+          <div class="gallery-grid">
+            <div class="gallery-item" data-lightbox="hair">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Elegant Braids">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="hair">
+              <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Wedding Updo">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="hair">
+              <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Protective Styles">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="hair">
+              <img src="https://images.unsplash.com/photo-1594736797933-d0c6f3b4b3a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Natural Styling">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="hair">
+              <img src="https://placehold.co/400x300/6a0dad/ffffff?text=Cornrow+Designs" alt="Cornrow Designs">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="hair">
+              <img src="https://placehold.co/400x300/7b68ee/ffffff?text=Twist+Styles" alt="Twist Styles">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="hair">
+              <img src="https://placehold.co/400x300/9370db/ffffff?text=Loc+Maintenance" alt="Loc Maintenance">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item" data-lightbox="hair">
+              <img src="https://placehold.co/400x300/ba55d3/ffffff?text=Special+Events" alt="Special Events">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2 class="section-title">Meet Bangura Event & Catering</h2>
+          <p>With over 15 years of experience in both culinary arts and hair styling, Bangura Event & Catering brings a unique blend of creativity and expertise to every project. From crafting exquisite dishes to creating stunning hairstyles, passion and attention to detail are at the heart of every service.</p>
+          <p>Whether you're planning an intimate dinner party or preparing for a special occasion, Bangura Event & Catering provides personalized service that exceeds expectations. Every dish is prepared with the finest ingredients, and every hairstyle is crafted to enhance your natural beauty.</p>
+          <a href="#contact" class="btn btn-primary">Book Consultation</a>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bangura Event & Catering">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">What Clients Say</h2>
+      <div class="testimonials-slider">
+        <div class="testimonial active">
+          <div class="testimonial-content">
+            <div class="client-photo">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah">
+            </div>
+            <p>"Bangura Event & Catering catered our wedding and it was absolutely perfect! The food was incredible and the presentation was stunning. Highly recommend!"</p>
+            <div class="client-info">
+              <h4>Sarah & Michael</h4>
+              <p>Wedding Clients</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <div class="client-photo">
+              <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jasmine">
+            </div>
+            <p>"The best braids I've ever had! Bangura Event & Catering is so talented and professional. My hair looked amazing for weeks."</p>
+            <div class="client-info">
+              <h4>Jasmine Williams</h4>
+              <p>Hair Styling Client</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <div class="client-photo">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="David">
+            </div>
+            <p>"Professional, creative, and reliable. Bangura Event & Catering made our corporate event a huge success with amazing food and service."</p>
+            <div class="client-info">
+              <h4>David Chen</h4>
+              <p>Corporate Client</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="testimonial-dots"></div>
+        <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 456 Culinary Avenue, Food District, CA 90210</p>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> info@banguraevent.com</p>
+          <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</p>
+
+          <div class="social-links">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-forms">
+          <!-- Catering Booking Form -->
+          <form id="catering-booking" class="booking-form active" action="https://formspree.io/f/mrbaqowo" method="POST">
+            <input type="hidden" name="_subject" value="New Catering Booking Request">
+            <input type="hidden" name="service_type" value="Catering Service">
+            <h3>Book Catering Service</h3>
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Your Phone" required>
+            </div>
+            <div class="form-group">
+              <select name="service" required>
+                <option value="" disabled selected>Select Catering Service</option>
+                <option value="wedding-catering">Wedding Catering</option>
+                <option value="corporate-catering">Corporate Events</option>
+                <option value="private-chef">Private Chef Service</option>
+                <option value="party-catering">Party Catering</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="date" name="date" required>
+            </div>
+            <div class="form-group">
+              <input type="number" name="guests" placeholder="Number of Guests" min="1" required>
+            </div>
+            <div class="form-group">
+              <textarea name="message" rows="4" placeholder="Event Details & Special Requests"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Book Catering</button>
+            <button type="button" class="btn btn-outline" id="deposit-btn-catering">
+              <i class="fas fa-mobile-alt"></i> Pay Deposit
+            </button>
+          </form>
+
+          <!-- Hair Styling Booking Form -->
+          <form id="hair-booking" class="booking-form" action="https://formspree.io/f/mrbaqowo" method="POST">
+            <input type="hidden" name="_subject" value="New Hair Styling Booking Request">
+            <input type="hidden" name="service_type" value="Hair Styling Service">
+            <h3>Book Hair Styling</h3>
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Your Phone" required>
+            </div>
+            <div class="form-group">
+              <select name="service" required>
+                <option value="" disabled selected>Select Hair Service</option>
+                <option value="braiding">Hair Braiding</option>
+                <option value="wedding-styling">Wedding Styling</option>
+                <option value="special-occasion">Special Occasion</option>
+                <option value="protective-styles">Protective Styles</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="date" name="date" required>
+            </div>
+            <div class="form-group">
+              <select name="hair-length" required>
+                <option value="" disabled selected>Hair Length</option>
+                <option value="short">Short</option>
+                <option value="medium">Medium</option>
+                <option value="long">Long</option>
+                <option value="very-long">Very Long</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea name="message" rows="4" placeholder="Style Preferences & Special Requests"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Book Hair Service</button>
+            <button type="button" class="btn btn-outline" id="deposit-btn-hair">
+              <i class="fas fa-mobile-alt"></i> Pay Deposit
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="booking-toggle">
+        <button class="toggle-btn active" data-form="catering-booking">Catering Services</button>
+        <button class="toggle-btn" data-form="hair-booking">Hair Styling</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>Bangura<span> Event & Catering</span></h3>
+          <p>Creating exceptional culinary experiences and beautiful hairstyles with passion, creativity, and professional excellence since 2008.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-legal">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Subscribe for updates on new services and special offers.</p>
+          <form class="newsletter-form" action="https://formspree.io/f/mrbaqowo" method="POST">
+            <input type="email" name="email" placeholder="Your Email Address" required>
+            <input type="hidden" name="_subject" value="Newsletter Subscription">
+            <input type="hidden" name="service_type" value="Newsletter Signup">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2024</span> Bangura Event & Catering. All rights reserved.</p>
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-amex"></i>
+          <i class="fab fa-cc-paypal"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#home" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- AI Chatbot Widget -->
+  <div id="chatbot-widget">
+    <div id="chatbot-button">
+      <i class="fas fa-comments"></i>
+    </div>
+    <div id="chatbot-window">
+      <div class="chat-header">
+        <h4>Bangura Event & Catering Assistant</h4>
+        <button id="close-chat">&times;</button>
+      </div>
+      <div id="chat-messages">
+        <div class="bot-message">
+          <div class="message-content">
+            <p>Hello! I'm here to help you with questions about our catering and hair styling services. How can I assist you today?</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <div class="input-group">
+          <input type="text" id="chat-input" placeholder="Type your message...">
+          <button id="send-message">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Price Calculator Modal -->
+  <div id="price-calculator-modal" class="modal">
+    <div class="modal-content calculator-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-calculator"></i> Price Calculator</h3>
+        <span class="close" onclick="closePriceCalculator()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <!-- Service Type Selection -->
+        <div class="calculator-step active" id="step-1">
+          <h4>Select Service Type</h4>
+          <div class="service-type-grid">
+            <div class="service-type-card" data-service="culinary">
+              <i class="fas fa-utensils"></i>
+              <h5>Culinary Services</h5>
+              <p>Catering & Private Chef</p>
+            </div>
+            <div class="service-type-card" data-service="hair">
+              <i class="fas fa-cut"></i>
+              <h5>Hair Styling</h5>
+              <p>Braiding & Special Occasions</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Culinary Calculator -->
+        <div class="calculator-step" id="step-culinary">
+          <h4>Culinary Service Details</h4>
+          <div class="calculator-form">
+            <div class="form-group">
+              <label>Service Type</label>
+              <select id="culinary-service" onchange="updateCulinaryPrice()">
+                <option value="" data-base="0">Select Service</option>
+                <option value="wedding-catering" data-base="45">Wedding Catering ($45/person)</option>
+                <option value="corporate-catering" data-base="35">Corporate Events ($35/person)</option>
+                <option value="private-chef" data-base="85">Private Chef ($85/person)</option>
+                <option value="party-catering" data-base="30">Party Catering ($30/person)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Number of Guests</label>
+              <input type="number" id="guest-count" min="1" max="500" value="10" onchange="updateCulinaryPrice()">
+            </div>
+            <div class="form-group">
+              <label>Event Duration</label>
+              <select id="event-duration" onchange="updateCulinaryPrice()">
+                <option value="1" data-multiplier="1">2-4 hours (Standard)</option>
+                <option value="1.3" data-multiplier="1.3">4-6 hours (+30%)</option>
+                <option value="1.6" data-multiplier="1.6">6-8 hours (+60%)</option>
+                <option value="2" data-multiplier="2">Full Day (+100%)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Additional Services</label>
+              <div class="checkbox-group">
+                <label class="checkbox-item">
+                  <input type="checkbox" id="setup-cleanup" data-cost="150" onchange="updateCulinaryPrice()">
+                  <span>Setup & Cleanup (+$150)</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" id="premium-menu" data-cost="15" onchange="updateCulinaryPrice()">
+                  <span>Premium Menu (+$15/person)</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" id="serving-staff" data-cost="25" onchange="updateCulinaryPrice()">
+                  <span>Serving Staff (+$25/hour/person)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hair Styling Calculator -->
+        <div class="calculator-step" id="step-hair">
+          <h4>Hair Styling Service Details</h4>
+          <div class="calculator-form">
+            <div class="form-group">
+              <label>Service Type</label>
+              <select id="hair-service" onchange="updateHairPrice()">
+                <option value="" data-base="0">Select Service</option>
+                <option value="braiding" data-base="80">Hair Braiding ($80-150)</option>
+                <option value="wedding-styling" data-base="120">Wedding Styling ($120-200)</option>
+                <option value="special-occasion" data-base="100">Special Occasion ($100-180)</option>
+                <option value="protective-styles" data-base="90">Protective Styles ($90-160)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Hair Length</label>
+              <select id="hair-length" onchange="updateHairPrice()">
+                <option value="1" data-multiplier="1">Short (Base Price)</option>
+                <option value="1.2" data-multiplier="1.2">Medium (+20%)</option>
+                <option value="1.4" data-multiplier="1.4">Long (+40%)</option>
+                <option value="1.6" data-multiplier="1.6">Very Long (+60%)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Hair Thickness</label>
+              <select id="hair-thickness" onchange="updateHairPrice()">
+                <option value="1" data-multiplier="1">Fine/Thin (Base Price)</option>
+                <option value="1.15" data-multiplier="1.15">Medium (+15%)</option>
+                <option value="1.3" data-multiplier="1.3">Thick (+30%)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Complexity Level</label>
+              <select id="hair-complexity" onchange="updateHairPrice()">
+                <option value="1" data-multiplier="1">Simple Style (Base Price)</option>
+                <option value="1.25" data-multiplier="1.25">Moderate (+25%)</option>
+                <option value="1.5" data-multiplier="1.5">Complex (+50%)</option>
+                <option value="1.8" data-multiplier="1.8">Intricate Design (+80%)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Additional Services</label>
+              <div class="checkbox-group">
+                <label class="checkbox-item">
+                  <input type="checkbox" id="hair-wash" data-cost="25" onchange="updateHairPrice()">
+                  <span>Hair Wash & Prep (+$25)</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" id="hair-treatment" data-cost="35" onchange="updateHairPrice()">
+                  <span>Deep Conditioning (+$35)</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" id="travel-service" data-cost="50" onchange="updateHairPrice()">
+                  <span>Travel to Location (+$50)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price Display -->
+        <div class="price-display">
+          <div class="price-breakdown">
+            <div class="price-item">
+              <span>Base Price:</span>
+              <span id="base-price">$0.00</span>
+            </div>
+            <div class="price-item">
+              <span>Additional Services:</span>
+              <span id="additional-price">$0.00</span>
+            </div>
+            <div class="price-item total-price">
+              <span>Total Estimate:</span>
+              <span id="total-price">$0.00</span>
+            </div>
+          </div>
+          <div class="price-note">
+            <p><i class="fas fa-info-circle"></i> This is an estimate. Final pricing may vary based on specific requirements.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="calc-back-btn" onclick="goBackStep()" style="display: none;">Back</button>
+        <button type="button" class="btn btn-secondary" onclick="closePriceCalculator()">Close</button>
+        <button type="button" class="btn btn-primary" id="calc-next-btn" onclick="proceedToBooking()" style="display: none;">Book This Service</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cash App Payment Modal -->
+  <div id="cashapp-modal" class="payment-modal">
+    <div class="payment-modal-content">
+      <div class="payment-header">
+        <h3>Pay Deposit with Cash App</h3>
+        <span class="payment-close">&times;</span>
+      </div>
+      <div class="payment-body">
+        <div class="qr-code-container">
+          <img src="https://placehold.co/200x200/1a1a1a/d4af37?text=Cash+App+QR" alt="Cash App QR Code" id="cashapp-qr">
+          <p class="qr-instructions">Scan this QR code with your Cash App to send a deposit</p>
+        </div>
+        <div class="payment-details">
+          <h4>Payment Information</h4>
+          <p><strong>Cash App:</strong> $BanguraEvent</p>
+          <p><strong>Deposit Amount:</strong> <span id="deposit-amount">$50.00</span></p>
+          <p><strong>Service:</strong> <span id="service-type">Catering Service</span></p>
+        </div>
+        <div class="payment-instructions">
+          <h4>How to Pay:</h4>
+          <ol>
+            <li>Open your Cash App</li>
+            <li>Tap the camera icon to scan QR codes</li>
+            <li>Scan the QR code above</li>
+            <li>Enter the deposit amount: <strong id="amount-reminder">$50.00</strong></li>
+            <li>Add a note with your name and service type</li>
+            <li>Send the payment</li>
+          </ol>
+        </div>
+        <div class="payment-confirmation">
+          <p><i class="fas fa-info-circle"></i> After payment, we'll confirm your booking within 24 hours via email or phone.</p>
+          <button class="btn btn-primary" id="payment-done">I've Sent the Payment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Upload Modal -->
+  <div id="quick-upload-modal" class="modal">
+    <div class="modal-content quick-upload-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-upload"></i> Quick Upload</h3>
+        <span class="close" onclick="closeQuickUpload()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <form id="quick-upload-form">
+          <div class="upload-category-info">
+            <p>Adding to: <strong id="upload-category-name"></strong></p>
+          </div>
+          
+          <div class="quick-file-upload">
+            <div class="quick-upload-zone" id="quick-upload-zone">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <h4>Drop files here or click to browse</h4>
+              <p>Photos and videos accepted</p>
+              <input type="file" id="quick-file-input" multiple accept="image/*,video/*" hidden>
+            </div>
+            <div class="quick-file-preview" id="quick-file-preview"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="quick-title">Title (optional)</label>
+            <input type="text" id="quick-title" placeholder="Enter a title for this upload">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="closeQuickUpload()">Cancel</button>
+        <button type="button" class="btn btn-primary" id="quick-upload-submit">
+          <i class="fas fa-upload"></i> Upload Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 360 Photo Viewer Modal -->
+  <div id="photo-360-modal" class="modal">
+    <div class="modal-content photo-360-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-sync-alt"></i> 360° Photo Viewer</h3>
+        <span class="close" onclick="close360Viewer()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="photo-360-container">
+          <div class="photo-360-viewer" id="photo-360-viewer">
+            <img id="photo-360-image" src="" alt="360° Photo">
+            <div class="rotation-controls">
+              <button class="rotation-btn" id="rotate-left" title="Rotate Left">
+                <i class="fas fa-undo"></i>
+              </button>
+              <div class="rotation-info">
+                <span id="rotation-angle">0°</span>
+                <small>Drag to rotate</small>
+              </div>
+              <button class="rotation-btn" id="rotate-right" title="Rotate Right">
+                <i class="fas fa-redo"></i>
+              </button>
+            </div>
+          </div>
+          <div class="photo-360-instructions">
+            <p><i class="fas fa-mouse-pointer"></i> Click and drag to rotate the photo 360°</p>
+            <p><i class="fas fa-mobile-alt"></i> On mobile: Touch and swipe to rotate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+    <button class="lightbox-360-btn" onclick="open360Viewer()" title="View in 360°">
+      <i class="fas fa-sync-alt"></i> 360° View
+    </button>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Bangura Event & Catering</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="advanced-features.css">
+  <style>
+    /* Blog-specific styles */
+    .blog-hero {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.9), rgba(139, 69, 19, 0.8)), url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 0 80px;
+      text-align: center;
+      color: white;
+    }
+    
+    .blog-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .blog-hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+    
+    .blog-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+    }
+    
+    .blog-main {
+      background: white;
+    }
+    
+    .blog-post {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .blog-post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .blog-post-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    
+    .blog-post-content {
+      padding: 30px;
+    }
+    
+    .blog-post-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    .blog-post-category {
+      background: linear-gradient(135deg, #d4af37, #b8941f);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    .blog-post h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #2c3e50;
+      line-height: 1.3;
+    }
+    
+    .blog-post h2 a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .blog-post h2 a:hover {
+      color: #d4af37;
+    }
+    
+    .blog-post-excerpt {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .read-more:hover {
+      color: #b8941f;
+      transform: translateX(5px);
+    }
+    
+    .blog-sidebar {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 30px;
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+    
+    .sidebar-section {
+      margin-bottom: 40px;
+    }
+    
+    .sidebar-section:last-child {
+      margin-bottom: 0;
+    }
+    
+    .sidebar-section h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #2c3e50;
+      border-bottom: 2px solid #d4af37;
+      padding-bottom: 10px;
+    }
+    
+    .recent-posts {
+      list-style: none;
+    }
+    
+    .recent-posts li {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .recent-posts li:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    
+    .recent-posts a {
+      color: #2c3e50;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .recent-posts a:hover {
+      color: #d4af37;
+    }
+    
+    .recent-posts .post-date {
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 5px;
+    }
+    
+    .categories-list {
+      list-style: none;
+    }
+    
+    .categories-list li {
+      margin-bottom: 10px;
+    }
+    
+    .categories-list a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #2c3e50;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .categories-list a:hover {
+      background: #f8f9fa;
+      color: #d4af37;
+    }
+    
+    .category-count {
+      background: #d4af37;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+    }
+    
+    .newsletter-signup {
+      background: linear-gradient(135deg, #d4af37, #b8941f);
+      color: white;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    
+    .newsletter-signup h4 {
+      margin-bottom: 10px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .newsletter-signup p {
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .newsletter-form input {
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    
+    .newsletter-form button {
+      background: white;
+      color: #d4af37;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .newsletter-form button:hover {
+      background: #f8f9fa;
+      transform: translateY(-2px);
+    }
+    
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 40px;
+    }
+    
+    .pagination a {
+      padding: 10px 15px;
+      background: white;
+      color: #2c3e50;
+      text-decoration: none;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      transition: all 0.3s ease;
+    }
+    
+    .pagination a:hover,
+    .pagination a.active {
+      background: #d4af37;
+      color: white;
+      border-color: #d4af37;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .blog-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .blog-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 20px;
+      }
+      
+      .blog-sidebar {
+        position: static;
+      }
+      
+      .blog-post-content {
+        padding: 20px;
+      }
+      
+      .blog-post h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="top-bar">
+      <div class="container">
+        <div class="maintenance-notice">
+          <span><i class="fas fa-tools"></i> This website is currently undergoing maintenance - Some features may be temporarily unavailable</span>
+        </div>
+        <div class="contact-info">
+          <span><i class="fas fa-phone"></i> +1 (555) 123-4567</span>
+          <span><i class="fas fa-envelope"></i> info@banguraevent.com</span>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">Bangura<span> Event & Catering</span></a>
+
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#collections">Collections</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li class="cart-icon"><a href="#cart"><i class="fas fa-shopping-bag"></i> <span class="cart-count">0</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Blog Hero Section -->
+  <section class="blog-hero">
+    <div class="container">
+      <h1>Our Blog</h1>
+      <p>Stay updated with the latest culinary trends, hair styling tips, event planning advice, and behind-the-scenes stories from Bangura Event & Catering.</p>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <div class="blog-container">
+    <!-- Main Blog Content -->
+    <main class="blog-main">
+      <!-- Featured Blog Post -->
+      <article class="blog-post">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Holiday Catering Tips" class="blog-post-image">
+        <div class="blog-post-content">
+          <div class="blog-post-meta">
+            <span class="blog-post-category">Catering Tips</span>
+            <span><i class="fas fa-calendar"></i> December 15, 2024</span>
+            <span><i class="fas fa-user"></i> Chef Patience</span>
+          </div>
+          <h2><a href="#">Holiday Catering: Making Your Celebrations Unforgettable</a></h2>
+          <p class="blog-post-excerpt">The holiday season is upon us, and it's time to start planning those special gatherings. Whether you're hosting an intimate family dinner or a large corporate celebration, our expert catering tips will help you create memorable experiences that your guests will treasure...</p>
+          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Blog Post 2 -->
+      <article class="blog-post">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Winter Hair Care" class="blog-post-image">
+        <div class="blog-post-content">
+          <div class="blog-post-meta">
+            <span class="blog-post-category">Hair Care</span>
+            <span><i class="fas fa-calendar"></i> December 10, 2024</span>
+            <span><i class="fas fa-user"></i> Patience Bangura</span>
+          </div>
+          <h2><a href="#">Winter Hair Care: Protecting Your Natural Hair During Cold Months</a></h2>
+          <p class="blog-post-excerpt">Winter weather can be harsh on natural hair, causing dryness, breakage, and other challenges. Learn our professional tips for maintaining healthy, beautiful hair throughout the colder months, including protective styling techniques and essential care routines...</p>
+          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Blog Post 3 -->
+      <article class="blog-post">
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Event Planning" class="blog-post-image">
+        <div class="blog-post-content">
+          <div class="blog-post-meta">
+            <span class="blog-post-category">Event Planning</span>
+            <span><i class="fas fa-calendar"></i> December 5, 2024</span>
+            <span><i class="fas fa-user"></i> Chef Patience</span>
+          </div>
+          <h2><a href="#">Planning the Perfect Wedding Reception: A Complete Guide</a></h2>
+          <p class="blog-post-excerpt">Your wedding day is one of the most important days of your life, and the reception should be nothing short of perfect. From menu selection to timeline coordination, discover our comprehensive guide to planning a wedding reception that reflects your unique style...</p>
+          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Blog Post 4 -->
+      <article class="blog-post">
+        <img src="https://images.unsplash.com/photo-1595475038665-8b0d8b4b7f8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Braiding Techniques" class="blog-post-image">
+        <div class="blog-post-content">
+          <div class="blog-post-meta">
+            <span class="blog-post-category">Hair Styling</span>
+            <span><i class="fas fa-calendar"></i> November 28, 2024</span>
+            <span><i class="fas fa-user"></i> Patience Bangura</span>
+          </div>
+          <h2><a href="#">Modern Braiding Techniques: Elevating Traditional Styles</a></h2>
+          <p class="blog-post-excerpt">Braiding is an art form that has been passed down through generations. Today, we're combining traditional techniques with modern creativity to create stunning styles that celebrate natural beauty. Explore the latest trends in protective braiding...</p>
+          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">Next <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="blog-sidebar">
+      <!-- Recent Posts -->
+      <div class="sidebar-section">
+        <h3>Recent Posts</h3>
+        <ul class="recent-posts">
+          <li>
+            <a href="#">Holiday Catering: Making Your Celebrations Unforgettable</a>
+            <div class="post-date">December 15, 2024</div>
+          </li>
+          <li>
+            <a href="#">Winter Hair Care: Protecting Your Natural Hair</a>
+            <div class="post-date">December 10, 2024</div>
+          </li>
+          <li>
+            <a href="#">Planning the Perfect Wedding Reception</a>
+            <div class="post-date">December 5, 2024</div>
+          </li>
+          <li>
+            <a href="#">Modern Braiding Techniques</a>
+            <div class="post-date">November 28, 2024</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="sidebar-section">
+        <h3>Categories</h3>
+        <ul class="categories-list">
+          <li><a href="#">Catering Tips <span class="category-count">8</span></a></li>
+          <li><a href="#">Hair Care <span class="category-count">12</span></a></li>
+          <li><a href="#">Event Planning <span class="category-count">6</span></a></li>
+          <li><a href="#">Hair Styling <span class="category-count">10</span></a></li>
+          <li><a href="#">Recipes <span class="category-count">15</span></a></li>
+          <li><a href="#">Behind the Scenes <span class="category-count">4</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="sidebar-section">
+        <div class="newsletter-signup">
+          <h4>Stay Updated</h4>
+          <p>Subscribe to our newsletter for the latest tips, trends, and exclusive offers.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>Bangura<span> Event & Catering</span></h3>
+          <p>Creating exceptional culinary experiences and beautiful hairstyles with passion, creativity, and professional excellence since 2008.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="footer-legal">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 456 Culinary Avenue, Food District, CA 90210</p>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> info@banguraevent.com</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="pinterest"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2024</span> Bangura Event & Catering. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
