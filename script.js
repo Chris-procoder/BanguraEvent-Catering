@@ -1,6 +1,40 @@
 // Bangura Event & Catering - JavaScript Functionality
 // Adapted from Mett-Apperals design
 
+// Chef Portrait Lightbox Function
+function openChefPortrait() {
+    const lightbox = document.createElement('div');
+    lightbox.className = 'chef-lightbox';
+    lightbox.innerHTML = `
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeChefPortrait()">&times;</span>
+            <img src="Chef.jpg" alt="Chef Patience - Bangura Event & Catering">
+            <div class="chef-info">
+                <h3>Chef Patience</h3>
+                <p>Master Chef & Hair Styling Artist</p>
+                <p>15+ years of culinary excellence and beauty artistry</p>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(lightbox);
+    document.body.style.overflow = 'hidden';
+    
+    // Close on background click
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            closeChefPortrait();
+        }
+    });
+}
+
+function closeChefPortrait() {
+    const lightbox = document.querySelector('.chef-lightbox');
+    if (lightbox) {
+        lightbox.remove();
+        document.body.style.overflow = 'auto';
+    }
+}
+
 // Price Calculator Variables
 let currentStep = 'step-1';
 let selectedService = '';
